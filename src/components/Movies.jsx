@@ -29,7 +29,7 @@ function Popular() {
             setHasmore(false)
 
         }
-        console.log(data)
+        
 
 
         } catch (error){

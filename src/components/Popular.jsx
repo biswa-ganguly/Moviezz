@@ -29,8 +29,6 @@ function Popular() {
             setHasmore(false)
 
         }
-        console.log(data)
-
 
         } catch (error){
           console.log("Error: ", error)

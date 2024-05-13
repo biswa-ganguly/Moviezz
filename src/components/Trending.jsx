@@ -30,7 +30,7 @@ function Trending() {
             setHasmore(false)
 
         }
-        console.log(data)
+        
 
 
         } catch (error){

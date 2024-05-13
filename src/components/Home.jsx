@@ -42,7 +42,7 @@ function Home() {
 
 
 
-    console.log(trending)
+    
     useEffect(()=>{
       !wallpaper && GetHeaderWallpaper()
        GetTrending()

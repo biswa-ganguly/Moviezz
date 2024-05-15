@@ -18,7 +18,7 @@ function Moviedetails() {
 
 
   return (
-    <div>Moviedetails</div>
+    <div className='text-white'>Moviedetails</div>
   )
 }
 

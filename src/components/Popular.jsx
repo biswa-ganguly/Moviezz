@@ -79,7 +79,7 @@ function Popular() {
             <hr />
             <InfinteScroll
             dataLength={popular.length} 
-            next={GetPopular}
+            next={GetPopular()}
             hasMore={hasmore}
             loader={<h1 className='text-3xl font-semibold text-yellow-400 text-center p-4'>Loading...</h1>}
             >

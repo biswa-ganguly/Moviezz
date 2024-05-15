@@ -8,22 +8,22 @@ import Loader from './Loader'
 import InfinteScroll from "react-infinite-scroll-component"
 
 
-function Popular() {
+function Movie() {
     const navigate = useNavigate()
     const [category, setCategory] = useState("now_playing")
-    const [movies, setMovies] = useState([])
+    const [movie, setMovie] = useState([])
     const [page, setPage] = useState(1)
     const [hasmore, setHasmore] = useState(true)
     
     document.title="Movies | " + category.toUpperCase()
 
 
-    const GetMovies = async()=> {
+    const GetMovie = async()=> {
         try{
           const {data} = await axios.get(`/movie/${category}?page=${page}`) 
 
         if(data.results.length>0){
-            setMovies((prevState)=> [...prevState, ...data.results])
+            setMovie((prevState)=> [...prevState, ...data.results])
             setPage(page+1)
         }else{
             setHasmore(false)
@@ -39,12 +39,12 @@ function Popular() {
 
 
       const refreshHandeler = () =>{
-        if (movies.length===0){
-            GetMovies()
+        if (movie.length===0){
+            GetMovie()
         }else{
             setPage(1)
-            setMovies([])
-            GetMovies()
+            setMovie([])
+            GetMovie()
         }
 
       }
@@ -68,7 +68,7 @@ function Popular() {
 
 
 
-      return movies.length>0 ? (
+      return movie.length>0 ? (
         <div className='p-5 w-screen h-screen'>
             <div className='w-full  flex items-center'>
                 <h1 className='text-2xl font-semibold text-yellow-400'>
@@ -80,17 +80,17 @@ function Popular() {
             </div>
             <hr />
             <InfinteScroll
-            dataLength={movies.length} 
-            next={GetMovies}
+            dataLength={movie.length} 
+            next={GetMovie()}
             hasMore={hasmore}
             loader={<h1 className='text-3xl font-semibold text-yellow-400 text-center p-4'>Loading...</h1>}
             >
             
     
-            <Cards data={movies} title="movies"/>
+            <Cards data={movie} title="movie"/>
             </InfinteScroll>
         </div>
       ): <Loader/>
     }
 
-export default Popular
+export default Movie

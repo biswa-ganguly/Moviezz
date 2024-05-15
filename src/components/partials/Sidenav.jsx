@@ -23,7 +23,7 @@ function Sidenav() {
             <h1 className='text-white font-semibold text-xl mt-5 mb-5'>New Feeds</h1>
             <Link to="/trending" className='hover:bg-[#6556CD] p-5 rounded-lg hover:text-white duration-300'> <i className="ri-fire-fill mr-2"></i>Trending</Link>
             <Link  to="/popular" className='hover:bg-[#6556CD] p-5 rounded-lg hover:text-white duration-300'> <i className="ri-magic-fill mr-2 "></i>Popoluar</Link>
-            <Link to="/movies" className='hover:bg-[#6556CD] p-5 rounded-lg hover:text-white duration-300'> <i className="ri-movie-2-fill mr-2"></i>Movies</Link>
+            <Link to="/movie" className='hover:bg-[#6556CD] p-5 rounded-lg hover:text-white duration-300'> <i className="ri-movie-2-fill mr-2"></i>Movies</Link>
             <Link to="/tv" className='hover:bg-[#6556CD] p-5 rounded-lg hover:text-white duration-300'> <i className="ri-tv-2-fill mr-2"></i>TV Shows</Link>
             <Link to="/person" className='hover:bg-[#6556CD] p-5 rounded-lg hover:text-white duration-300'> <i className="ri-team-fill mr-2"></i>People</Link>
         </nav>

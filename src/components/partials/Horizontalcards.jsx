@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Dropdown from './Dropdown'
 
-function Horizontalcards({data}) {
+function Horizontalcards({data, title}) {
     
   return (
     

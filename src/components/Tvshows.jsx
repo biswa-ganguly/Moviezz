@@ -43,7 +43,7 @@ function Popular() {
             GetTv()
         }else{
             setPage(1)
-            setTv([])
+            setTv()
             GetTv()
         }
 
@@ -81,7 +81,7 @@ function Popular() {
             <hr />
             <InfinteScroll
             dataLength={tv.length} 
-            next={GetTv}
+            next={GetTv()}
             hasMore={hasmore}
             loader={<h1 className='text-3xl font-semibold text-yellow-400 text-center p-4'>Loading...</h1>}
             >

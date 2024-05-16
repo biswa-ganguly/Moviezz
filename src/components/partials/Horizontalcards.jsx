@@ -9,7 +9,7 @@ function Horizontalcards({data, title}) {
     
         <div className=' w-full  flex  overflow-y-hidden mb-5 p-3 '>
             {data.map((d, index )=>(
-            <Link to={`${d.media_type || title}/details/${d.id}`} key={index} className='min-w-[20%] mr-5 p-2 bg-zinc-900 mb-3'>
+            <Link to={`/${d.media_type || title}/details/${d.id}`} key={index} className='min-w-[20%] mr-5 p-2 bg-zinc-900 mb-3'>
                 <img className='w-full  object-cover' src={`https://image.tmdb.org/t/p/original/${d.backdrop_path || d.profile_path})`} alt="" />
             <h1 className='text-l font-semibold mt-3 text-white'>
                 {d.title || d.name}

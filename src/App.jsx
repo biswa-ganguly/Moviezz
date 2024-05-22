@@ -11,7 +11,7 @@ import Moviedetails from './components/Moviedetails'
 import Tvdetails from './components/Tvdetails'
 import PeopleDetails from './components/PeopleDetails'
 import Trailer from './components/partials/Trailer'
-import Notfound from './components/Notfound'
+
 
 
 
@@ -39,7 +39,7 @@ function App()  {
 
       <Route path='/person' element={<People/>} />
       <Route path='/person/details/:id' element={<PeopleDetails/>} />
-      <Route path='*' element={<Notfound/>} />
+      <Route path='*' element={<Loader/>} />
       
         
 

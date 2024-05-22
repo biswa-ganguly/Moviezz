@@ -1,5 +1,5 @@
 import React from 'react'
-import Nothing from "./404.webp"
+import Nothing from "/404.webp"
 import Loader from './Loader'
 
 function Notfound() {

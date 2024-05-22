@@ -2,7 +2,8 @@ import React from 'react'
 import ReactPlayer from 'react-player'
 import { useSelector } from 'react-redux'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import Notfound from '../Notfound'
+
+import Loader from '../Loader'
 
 function Trailer() {
   const navigate = useNavigate()
@@ -23,7 +24,7 @@ function Trailer() {
       height={500}
       width={1000}
       url={`https://www.youtube.com/watch?v=${ytvideo.key}`}
-      />):(<Notfound/>)}
+      />):(<Loader/>)}
 
       
     </div>

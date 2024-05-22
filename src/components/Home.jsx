@@ -67,6 +67,7 @@ function Home() {
     </div>
    
     </>
+  
 
   ) : <Loader/>
 }

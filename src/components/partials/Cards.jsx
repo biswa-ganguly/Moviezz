@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import noimage  from "/noimage.jpg"
 
 function Cards({data, title}) {
   return (
@@ -8,7 +9,7 @@ function Cards({data, title}) {
         {data.map((c,i)=>(
             <Link 
                 to={`/${c.media_type || title}/details/${c.id}`}  key={i} className='relative lg:w-[40vh] m-[2%]  mb-[4%]'>
-                <img className=' sm:h-[60vh] w-full object-cover rounded-xl  shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)]' src={`https://image.tmdb.org/t/p/original/${c.poster_path || c.profile_path || c.backdrop_path})`} alt="" />
+                <img className=' sm:h-[60vh] w-full object-cover rounded-xl  shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)]' src={c.poster_path || c.profile_path || c.backdrop_path ? `https://image.tmdb.org/t/p/original/${c.poster_path || c.profile_path || c.backdrop_path})`:noimage} alt="" />
                 <h1 className='text-2xl text-zinc-400 mt-3 flex justify-center items-center font-medium'>
                 {c.title || c.name}
                 </h1>

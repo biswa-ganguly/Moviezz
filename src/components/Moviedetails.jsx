@@ -4,6 +4,7 @@ import { useNavigate, useParams, Link, useLocation, Outlet } from 'react-router-
 import { asyncloadmovie, removemovie } from '../store/actions/Movieactions'
 import Loader from './Loader'
 import Horizontalcards from './partials/Horizontalcards'
+import Trailer from './partials/Trailer'
 
 function Moviedetails() {
   const {pathname} = useLocation()
@@ -23,16 +24,16 @@ function Moviedetails() {
 
 
   return info ? (
-    <div style={{background:`linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6),rgba(0,0,0,.8)), url(https://image.tmdb.org/t/p/original/${info.details.backdrop_path})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}} className='w-screen px-[10vh] h-[150%]'>
+    <div style={{background:`linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8),rgba(0,0,0,.8)), url(https://image.tmdb.org/t/p/original/${info.details.backdrop_path})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}} className='relative w-screen px-[10vh] h-[150%]'>
 {/* navbar */}
       <nav className='h-[10vh] w-full text-zinc-200 flex justify-evenly gap-10 items-center mb-4 text-3xl '>
 
       <Link
-        onClick={()=> navigate(-1)} className=" mr-2 text-yellow-400 hover:text-[#6556CD] ri-arrow-left-line">
+        onClick={()=> navigate(-1)} className=" mr-2 hover:text-yellow-400 text-white hover:scale-125 transition ri-arrow-left-line">
       </Link>
-      <a target='_blank' href={info.details.homepage}><i className="text-yellow-400 hover:text-[#6556CD]  ri-external-link-fill"></i></a>
-      <a target='_blank' href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}><i className="text-yellow-400 hover:text-[#6556CD]  ri-earth-fill"></i></a>
-      <a className='text-yellow-400 hover:text-[#6556CD] ' target='_blank' href={`https://www.imdb.com/title/${info.externalid.imdb_id}/`}>IMDB</a>
+      <a target='_blank' href={info.details.homepage}><i className="hover:text-yellow-400 text-white hover:scale-110 transition ri-external-link-fill"></i></a>
+      <a target='_blank' href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}><i className="hover:text-yellow-400 text-white hover:scale-125 transition ri-earth-fill"></i></a>
+      <a className='hover:text-yellow-400 text-white hover:scale-110 transition' target='_blank' href={`https://www.imdb.com/title/${info.externalid.imdb_id}/`}>IMDB</a>
       </nav>
 <hr />
 
@@ -119,7 +120,7 @@ function Moviedetails() {
       <Horizontalcards data={info.recomendation.length>0 ? info.recomendation : info.similar}/>
 
 
-      <Outlet/>
+     <Outlet/>
 
 
     </div>

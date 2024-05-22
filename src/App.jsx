@@ -11,6 +11,8 @@ import Moviedetails from './components/Moviedetails'
 import Tvdetails from './components/Tvdetails'
 import PeopleDetails from './components/PeopleDetails'
 import Trailer from './components/partials/Trailer'
+import Notfound from './components/Notfound'
+
 
 
 
@@ -25,17 +27,19 @@ function App()  {
 
       <Route path='/movie' element={<Movie/>} /> 
       <Route path='/movie/details/:id' element={<Moviedetails/>} />
-      <Route path='/movie/details/:id/trailer' element={<Trailer/>} />
+      {/* <Route path='/movie/details/:id/trailer' element={<Trailer/>} /> */}
 
       
 
       <Route path='/tv' element={<Tvshows/>} /> 
       <Route path='/tv/details/:id' element={<Tvdetails/>} />
+      {/* <Route path='/tv/details/:id/trailer' element={<Trailer/>} /> */}
       
         
 
       <Route path='/person' element={<People/>} />
       <Route path='/person/details/:id' element={<PeopleDetails/>} />
+      <Route path='*' element={<Notfound/>} />
       
         
 

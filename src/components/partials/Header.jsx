@@ -18,7 +18,7 @@ function Header( {data}) {
                 {data.release_date || "Coming Soon.."}
         </p>
         <Link to={`/${data.media_type || title}/details/${data.id}/trailer`} className='p-3 flex items-center bg-[#6556CD] rounded-xl mt-3 text-white font-semibold'>
-        <i class="ri-play-circle-line mr-1 text-2xl"></i>Watch Trailer
+        <i className="ri-play-circle-line mr-1 text-2xl"></i>Watch Trailer
         </Link>
     </div>
   )

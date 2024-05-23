@@ -16,8 +16,8 @@ function Trailer() {
     <div className=' absolute top-0 left-0 z-[100] bg-[rgba(0,0,0,.9)] w-screen h-screen flex justify-center items-center'>
       <Link
         onClick={()=> navigate(-1)} 
-        className=" absolute mr-2 hover:text-yellow-400 text-3xl text-white hover:scale-125 transition right-[5%] top-[5%] ri-close-fill">
-      </Link>
+        className=" absolute mr-2 hover:scale-110 text-3xl text-white  transition right-[5%] top-[5%] ri-close-fill">
+        </Link>
       { ytvideo ? (
       <ReactPlayer
       controls
@@ -25,6 +25,7 @@ function Trailer() {
       width={1000}
       url={`https://www.youtube.com/watch?v=${ytvideo.key}`}
       />):(<Loader/>)}
+      
 
       
     </div>

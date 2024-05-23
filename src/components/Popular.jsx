@@ -70,7 +70,7 @@ function Popular() {
         <div className='p-5 w-screen h-screen'>
             <div className='w-full  flex items-center'>
                 <h1 className='text-2xl font-semibold text-yellow-400'>
-                <i onClick={()=> navigate(-1)} class=" mr-2 hover:text-[#6556CD] text-zinc-400 ri-arrow-left-line"></i>Popular</h1>
+                <i onClick={()=> navigate(-1)} className=" mr-2 hover:text-[#6556CD] text-zinc-400 ri-arrow-left-line"></i>Popular</h1>
     
                 <Topnav/>
                 <Dropdown title="Category" options={["movie", "tv"]} func={(e)=>setCategory(e.target.value)} />
